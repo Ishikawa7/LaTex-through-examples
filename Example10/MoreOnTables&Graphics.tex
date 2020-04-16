@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{multirow} %for using multiple row spannig
+\usepackage{graphicx}
+\graphicspath{{graphics/}} %folder in which i have my graphics
+
+\usepackage{caption,subcaption} % import multiple package separated by comma
+
+\title{More on Tables and Graphics}
+\author{Davide Grimaldi}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Introduction}
+        Here we'll look at more table and graphics formatting
+
+        \subsection{More on Tables}
+            Table~\ref{tab:wrapping} uses text wrapping in the last column.
+            \begin{table}[htbp]
+                \caption{Text wrapping}
+                \begin{center}
+                    \begin{tabular}{| l | l | l |}
+                        \hline
+                        CS101 & Java & Programming with Java \\
+                        CS201 & Languages & Programming Languages principles \\
+                        CS301 & Compilers & Principles of Compilers design and implementation \\
+                        \hline
+                    \end{tabular}
+                \end{center}
+                \label{tab:wrapping}
+            \end{table}
+
+            Table~\ref{tab:multi} uses row and column span.
+            \begin{table}[htbp]
+                \caption{Spanning rows and columns}
+                \begin{center}
+                    \begin{tabular}{| l | c | c |}
+                        \hline
+                        & \multicolumn{2}{c|}{Ranges}\\ % First parameter: number of column to span, second parameter: allignement, third: text to put
+                        & X & Y\\
+                        \hline
+                        \multirow{3}{*}{Hot} & 7 & 9\\ % "*" for natural width
+                        & 5 & 8 \\
+                        & 6 & 7 \\
+                        \hline
+                        \multirow{3}{*}{Cold} & 4 & 7\\ %same notation of multicolumn
+                        & 2 & 9 \\
+                        & 3 & 5 \\
+                        \hline
+                    \end{tabular}
+                \end{center}
+                \label{tab:multi}
+            \end{table}
+
+        \subsection{More on Graphics}
+            Both of my graphics are in the graphics folder for the subfigures, Figure~\ref{fig:paper} and Figure~\ref{fig:page} in Figure~\ref{fig:subs}\\
+            \begin{figure}[htbp]
+                \centering
+                \begin{subfigure}[b]{0.2\textwidth}
+                    \centering
+                    \includegraphics[scale=0.5]{paper.png}
+                    \caption{beginning}
+                    \label{fig:paper}
+                \end{subfigure}%
+                \begin{subfigure}[b]{0.2\textwidth}
+                    \centering
+                    \includegraphics[scale=0.5]{page.png}
+                    \caption{end}
+                    \label{fig:page}
+                \end{subfigure}
+                \caption{The process}
+                \label{fig:subs}
+            \end{figure}
+\end{document}

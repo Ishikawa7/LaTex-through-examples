@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\title{List Enviroments}
+\author{Davide Grimaldi}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Introduction}
+        List Enviroments in \LaTeX
+
+        \subsection{Bulleted List}
+            \begin{itemize}
+                \item Red
+                \item Green
+                \item Blue
+            \end{itemize}
+
+        \subsection{Numbered List}
+            \begin{enumerate}
+                \item Red
+                \item Green
+                \item Blue
+            \end{enumerate}           
+
+        \subsection{Description}
+            \begin{description}
+                \item[Name] Your name here
+                \item[Subject] \LaTeX
+                \item[Grade] 30/30   
+            \end{description}
+
+    \section{Nested Lists}
+        \begin{enumerate}
+            \item Element 1
+            \begin{itemize}
+                \item Element A
+                \item Element B
+                \item Element C
+            \end{itemize}
+            \item Element 2
+            \begin{itemize}
+                \item Element A1
+                \item Element B2
+                \item Element C2
+            \end{itemize}
+        \end{enumerate}
+
+    \section{Conclusion}
+        End.
+
+\end{document}

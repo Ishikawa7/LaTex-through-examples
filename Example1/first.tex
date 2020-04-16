@@ -1,0 +1,40 @@
+%this is a comment, it will be ignored when document is built
+
+%all you need is a LaTex editor and a LaTex engine for building the document
+
+%documentclass is used to specific the document type (it change document layout, properties and more)
+\documentclass{article} 
+
+%we can use a package for styling our document, in this case we use geometry package with parameters in [] for changing the default document margin
+\usepackage[margin = 1in]{geometry} 
+
+%DOCUMENT META INFO
+\title{TITLE} 
+\author{Davide Grimaldi}
+\date{} %no date with empty parentesis
+
+%begin of the document
+\begin{document} 
+
+    \maketitle %it makes title the following line
+
+    \section{Introduction}
+
+        All set up and ready to go. Let's review some basic concepts
+
+        \subsection{This is a subsection}
+
+            Sub section content
+
+        \subsubsection{This is a sub subsection}
+
+            Subsub section content, we can continue nesting sub sections up to four levels
+
+    \section{Conclusion}
+
+        Conclusion of my demo document written in \LaTeX. %special style for write LaTex tag
+
+\end{document}
+
+% After build the document you will have various file: .pdf and .tex are the most importat, you can get rid of the others
+% .pdf file will have same name of the .tex file, if you change it modifications on the .tex does not affect renamed .pdf anymore

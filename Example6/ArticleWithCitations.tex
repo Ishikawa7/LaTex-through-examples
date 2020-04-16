@@ -1,0 +1,23 @@
+% in this document we will use the .bib file for citations
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\title{Article with citations}
+\author{Davide Grimaldi}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Introduction}
+        This article is about citations. \\
+        I read a book~\cite{campbell2019} \\
+        I read an article~\cite{smith2020} \\
+        I use \LaTeX~\cite{latex} \\
+    \section{References}
+        \bibliography{BibTex} % reference to my .bib file 
+        \bibliographystyle{plain} % a simple style for bibliography
+
+    \section{Conclusion}
+
+\end{document}

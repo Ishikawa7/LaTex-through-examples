@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\title{Tables Floats and the Tabular Enviroment}
+\author{Davide Grimaldi}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Introduction}
+        Tables examples
+
+        \subsection{The Tabular Enviroment}
+            This is the tabular Enviroment for the table~\ref{tab:grades}
+            \vspace*{.5cm} %vertival space
+            \\
+            % we can use \smallskip or \bigskip commands for vertical spacing
+            \begin{tabular}{|c|c|} %two "l" one left line for each column, "c" for centered columns, "|" for vertical bars
+                \hline %orizontal bar
+                Name & Your Name Here \\
+                \hline
+                Subject & \LaTeX \\
+                \hline
+                Grade & 30/30 \\
+                \hline
+            \end{tabular}
+        
+        % in LaTex a table is a float element: LaTex try to put that element in your document where it looks nicer    
+        \subsection{Floats: Table}
+            %begin create a new environment
+            \begin{table}[htbp] % [preference for positioning] h=here t=top b=bottom p=page(next page) 
+                \caption{My Gradebook}
+                \begin{center}
+                    %precedent tabular 
+                    \begin{tabular}{|l|l|} 
+                        \hline
+                        Name & Your Name Here \\
+                        \hline
+                        Subject & \LaTeX \\
+                        \hline
+                        Grade & 30/30 \\
+                        \hline
+                    \end{tabular}
+                \end{center}
+                \label{tab:grades} %label used for referencing this table (see down)
+            \end{table}
+
+            \subsection{References}
+                See my grades table~\ref{tab:grades}.
+
+    \section{Conclusion}
+        This is the basics for creating tables
+\end{document}

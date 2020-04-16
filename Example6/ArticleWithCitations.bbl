@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{latex}
+Latex - a document preparation system.
+\newblock http://www.latex-project.org/.
+
+\bibitem{campbell2019}
+Tom Campbell.
+\newblock {\em A super book}.
+\newblock PubCo, 2019.
+
+\bibitem{smith2020}
+James Smith, Thomas Brown, and Bill Morgan.
+\newblock A good article.
+\newblock {\em Computer}, 280(10):100--100, 2020.
+
+\end{thebibliography}
